@@ -6,9 +6,9 @@ blockquote:before,blockquote:after,q:before,q:after { content: ''; content: none
 table { border-collapse: collapse; border-spacing: 0;}
 
 main {
-    padding-top: 40px;
+ 	padding: 3ch 0 1ch 1em;
     font-size: 1.3125rem;
-    
+    text-align: center;
 }
 
 header {
@@ -23,18 +23,9 @@ header {
     z-index: 100;
 }
 
-nav {
-    display: flex;
-}
-
 #logo, .dropbtn {
-    display: inline;
     height: 40px;
     width: 40px;
-}
-
-.dropbtn {
-    padding-left: 5px;
 }
 
 .dropdown::before {
@@ -75,8 +66,6 @@ nav {
 }
 
 #title {
-    position: relative;
-    text-align: center;
     font-size: x-large;
     font-weight: 600;
     padding-top: 20px;
@@ -92,11 +81,6 @@ nav {
 
 .main-item img {
     max-width: 100%;
-    height: auto;
-}
-
-.main-item p {
-    text-align: center;
 }
 
 a {
@@ -106,23 +90,22 @@ a {
 
 .container {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 1.5fr;
     background: #fbf9ff;
 }
 
 aside {
     position: relative;
     top: 7.1rem;
-    display: flex;
-    flex-direction: column;
     box-shadow: 10px 10px;
-    width: clamp(8rem, 90%, 100%);
-    max-height: calc(min(60vh, 9%) + 56vh);
+    width: clamp(8rem, 85%, 100%);
+    height: fit-content;
     overflow: auto;
+    text-align: center;
 }
 
 table td {
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid #312f2f;
 }
 
 table {
@@ -132,20 +115,14 @@ table {
 th {
     padding: 40px 0 40px;
     font-weight: 600;
-    border-bottom: 1px solid black;
     background-color: #312f2f;
     color: #e2c044;
 }
 
 td {
-    margin-bottom: 30px;
-    text-align: center;
     padding: 20px 0;
 }
 
-.last-td {
-    border-bottom: none;
-}
 
 footer {
     background-color: #170312;
