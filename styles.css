@@ -5,6 +5,17 @@ blockquote,q { quotes: none;}
 blockquote:before,blockquote:after,q:before,q:after { content: ''; content: none;}
 table { border-collapse: collapse; border-spacing: 0;}
 
+:root {
+    --bg-global: #170312;
+    --header-light: #33032f;
+    --header-lighter: #531253;
+    --white-text: #fbf9ff;
+    --table-color: #312f2f;
+    --table-accent: #C7B03A;
+    --font-body: 'Zilla Slab', serif;
+    --font-header: 'Alfa Slab One', cursive;
+}
+
 main {
  	padding: 3ch 0 1ch 1em;
     font-size: 1.3125rem;
@@ -15,11 +26,11 @@ header {
     position: fixed;
     width: 100%;
     height: 40px;
-    background: #33032f;
-    background: #170312;
-    background: -moz-linear-gradient(left, #170312 0%, #531253 72%, #33032f 100%);
-    background: -webkit-linear-gradient(left, #170312 0%, #531253 72%, #33032f 100%);
-    background: linear-gradient(to right, #170312 0%, #531253 72%, #33032f 100%);
+    background: var(--table-color);
+    background: var(--bg-global);
+    background: -moz-linear-gradient(left, var(--bg-global) 0%, var(--header-light) 72%, var(--header-light) 100%);
+    background: -webkit-linear-gradient(left, var(--bg-global) 0%, var(--header-light) 72%, var(--header-light) 100%);
+    background: linear-gradient(to right, var(--bg-global) 0%, var(--header-light) 72%, var(--header-light) 100%);
     z-index: 100;
 }
 
@@ -59,20 +70,22 @@ header {
 .dropdown:hover .menu-content {display: block;}
 
 .header-text {
-    color: #fbf9ff;
+    font-family: var(--font-header);
+    font-size: 1.5em;
+    color: var(--white-text);
     position: absolute;
     right: 3%;
-    top: 25%;
+    top: 15%;
 }
 
 #title {
-    font-size: x-large;
-    font-weight: 600;
+    font-size: 2em;
+    font-weight: 700;
     padding-top: 20px;
 }
 
 .main-section {
-    padding: 1.5rem 0 1rem 0.4rem;
+    padding: 0.5rem 0 1rem 0.4rem;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
@@ -89,9 +102,10 @@ a {
 }
 
 .container {
+    font-family: var(--font-body);
     display: grid;
     grid-template-columns: 2fr 1.5fr;
-    background: #fbf9ff;
+    background: var(--white-text);
 }
 
 aside {
@@ -102,10 +116,11 @@ aside {
     height: fit-content;
     overflow: auto;
     text-align: center;
+    font-weight: 300;
 }
 
 table td {
-    border-bottom: 3px solid #312f2f;
+    border-bottom: 3px solid var(--table-color);
 }
 
 table {
@@ -114,9 +129,9 @@ table {
 
 th {
     padding: 40px 0 40px;
-    font-weight: 600;
-    background-color: #312f2f;
-    color: #e2c044;
+    font-weight: 800;
+    background-color: var(--table-color);
+    color: var(--table-accent);
 }
 
 td {
@@ -125,12 +140,12 @@ td {
 
 
 footer {
-    background-color: #170312;
+    background-color: var(--bg-global);
 }
 
 .footer-container {
     display: flex;
-    padding: 0.5rem 0;
+    padding: 0.3em 0;
     height: 3rem;
     justify-content: center;
 }
@@ -147,5 +162,5 @@ footer img {
 .footer-text {
     text-align: center;
     padding-bottom: 0.5rem;
-    color: #b3a394
+    color: var(--white-text)
 }
