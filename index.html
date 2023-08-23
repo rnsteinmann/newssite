@@ -14,15 +14,15 @@
     <header>
         <nav>
             <img src="static/logo.png" alt="Website logo" id="logo" />
-            <div class="dropdown">
-                <img src="https://static.vecteezy.com/system/resources/previews/002/292/406/non_2x/hamburger-menu-line-icon-free-vector.jpg"" alt="Menu button" class="dropbtn">
-                <div class="menu-content">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
-                </div>
-            </div>
-            <div class="header-text">Example website</div>
+            <ul class="menu">
+                <li><a href="#">Economy</a></li>
+                <li><a href="#">Politics</a></li>
+                <li><a href="#">Society</a></li>
+                <li><a href="#">Sports</a></li>
+                <li><a href="#">International</a></li>
+                <li><a href="#">Horoscope</a></li>
+              </ul>
+              <button class="menu-button">&#9776;</button>
         </nav>
     </header>
     <div class="container">
@@ -60,7 +60,7 @@
                     <table>
                         <thead>
                             <tr>
-                                <th>Recommended</th>
+                                <th class="recommended">Recommended</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -99,5 +99,14 @@
         </div>
         <p class="footer-text">All rights reserved - 2023</p>
     </footer>
+
+    <script>
+        const menuButton = document.querySelector(".menu-button");
+        const menu = document.querySelector(".menu");
+
+        menuButton.addEventListener("click", () => {
+        menu.classList.toggle("expanded");
+        });
+    </script>
 </body>
 </html>
